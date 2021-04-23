@@ -16,7 +16,7 @@ body{
 
 header{
   background-color: var(--very-light-red); 
-  background-image: url("./images/bg-pattern-intro.svg");
+  background-image: linear-gradient(rgba(255, 143, 112, 0.4), rgba(255, 61, 84, 0.4)), url("./images/bg-pattern-intro.svg");
   background-size: auto;
   background-position: center;
   width: 100%;
@@ -196,8 +196,6 @@ h4{
 }
 
 #editor-image{
-  /* grid-column: 2;
-  grid-row: 1 / span 4; */
   width: 120%;
   margin: 4rem 0 0 4rem;
 }
@@ -213,10 +211,44 @@ article{
   width: 100%;
   display: flex;
   flex-direction: row;
+  color: white;
 }
 
-.text-right{
+article h2 {
+  color: white;
+}
+.article-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
   width: 100%;
+}
+.background-container{
+  height: 68%;
   background-color: var(--very-dark-blue);
+  background-image: linear-gradient(rgba(44, 45, 63, 0.5), rgba(63, 65, 100, 0.5)), url("images/bg-pattern-circles.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  margin-bottom: 2.7rem;
+  border-radius: 0 70px 0 70px;
+}
+
+
+
+.text-right{
+  width: 50%;
+}
+
+.phone-container{
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 }
