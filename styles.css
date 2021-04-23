@@ -153,6 +153,7 @@ main{
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
   color: var(--dark-grayish-blue);
+  overflow: hidden;
 }
 
 h2{
@@ -176,7 +177,8 @@ h4{
 #intro-paragraph{
   grid-row: 2;
   grid-column: 1;
-  margin-top: 4rem;
+  margin-top: 0rem;
+  align-self: center;
 }
 
 #cm-paragraph{
@@ -185,9 +187,17 @@ h4{
   margin-top: 0;
 }
 
-#editor-image{
+.img-container{
   grid-column: 2;
   grid-row: 1 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#editor-image{
+  /* grid-column: 2;
+  grid-row: 1 / span 4; */
   width: 120%;
   margin: 4rem 0 0 4rem;
 }
@@ -197,4 +207,16 @@ h4{
   margin: 2rem auto;
   line-height: 1.6;
   font-weight: 500;
+}
+
+article{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.text-right{
+  width: 100%;
+  background-color: var(--very-dark-blue);
+  z-index: 1;
 }
