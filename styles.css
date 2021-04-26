@@ -191,15 +191,10 @@ h4{
 }
 
 #intro-paragraph{
-  grid-row: 2;
-  grid-column: 1;
   margin-top: 0rem;
-  align-self: center;
 }
 
 #cm-paragraph{
-  grid-row: 3;
-  grid-column: 1;
   margin-top: 0;
 }
 
@@ -209,6 +204,14 @@ h4{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.content-container{
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #editor-image{
@@ -355,6 +358,10 @@ footer a:hover{
   text-decoration: underline rgba(255, 255, 255, 0.75);
 }
 
+#mobile-editor-image{
+  display: none;
+}
+
 @media only screen and (max-width: 975px){
   article h2{
     font-size: 1.5rem;
@@ -362,8 +369,62 @@ footer a:hover{
   }
 
   .text-right{
-    align-items: center;
+    text-align: center;
+    height: fit-content;
+    align-self: center;
   }
+
+  main{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  main h2{ 
+    order: 1
+  }
+
+  #editor-image{
+    display: none;
+  }
+  #mobile-editor-image{
+    display: unset;
+  }
+  .img-container{
+    margin-top: 3rem;
+  }
+
+  .main-content{
+    text-align: center;
+    max-width: 80%;
+  }
+  h4{
+    font-size: 2rem;
+  }
+
+  .closing-article{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .closing-container{
+    width: 95%;
+    text-align: center;
+  }
+
+  .closing-container .main-content{
+    margin: auto;
+    max-width: 90%;
+  }
+  .laptop-container{
+    min-width: 95%;
+    height: 340px;
+    background-image:url("images/illustration-laptop-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
 }
 
 @media only screen and (max-width: 800px){
@@ -380,7 +441,9 @@ footer a:hover{
   }
   .background-container{
     flex-direction: column;
-    height: 68%;
+    height: 75%;
+    background-position: bottom center;
+    padding-bottom: 2rem;
   }
   .phone-container{
     padding-bottom: 2rem;
@@ -392,15 +455,41 @@ footer a:hover{
     justify-content: start;
     justify-self: start;
     padding-bottom: 2rem;
+    align-self: center;
   }
 
   .text-right .main-content{
-    max-width: 100%;
-    text-align: center;
+    max-width: 90%;
+    min-height: 251px;
+    margin: auto;
   }
 
   article h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    align-self: center;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .footer-content{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  footer{
+    height: fit-content;
+  }
+
+  footer .logo{
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-section{
+    margin-bottom: 1.5rem;
   }
 }
