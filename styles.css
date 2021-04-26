@@ -24,7 +24,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 0 0 0 55px;
+  border-radius: 0 0 0 70px;
   color: white;
 }
 
@@ -112,6 +112,12 @@ nav a{
   width: 5rem;
   height: 16px;
   margin-top: 2px;
+  transition: all 0.25s ease;
+}
+
+.bubble-link:hover {
+  background-color: var(--very-light-red);
+  color: white;
 }
 
 .header-content{
@@ -131,6 +137,12 @@ nav a{
   height: 16px;
   margin-top: 2px;
   margin-left: 12px;
+  transition: all 0.25s ease;
+}
+
+.clear-bubble:hover {
+  background-color: white;
+  color: var(--light-red);
 }
 
 h1{
@@ -204,7 +216,7 @@ h4{
   max-width: 69%;
   margin: 2rem auto;
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 article{
@@ -216,6 +228,10 @@ article{
 
 article h2 {
   color: white;
+  font-size: 2.2rem;
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 .article-container{
   display: grid;
@@ -243,6 +259,10 @@ article h2 {
 
 .text-right{
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
 }
 
 .phone-container{
@@ -251,4 +271,36 @@ article h2 {
   display: flex;
   justify-content: center;
   z-index: 2;
+}
+
+article .main-content {
+  margin: 0;
+}
+
+.closing-article{
+ color: var(--dark-grayish-blue);
+ height: 800px;
+}
+
+.closing-container{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.closing-container h4{
+  margin-bottom: 1.5rem;
+}
+
+#margin-me{margin-top: 3.5rem;}
+
+.laptop-container{
+  min-width: 50%;
+  background-image:url("images/illustration-laptop-desktop.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
 }
