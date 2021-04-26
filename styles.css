@@ -266,7 +266,6 @@ article h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: flex-start;
 }
 
 .phone-container{
@@ -275,6 +274,10 @@ article h2 {
   display: flex;
   justify-content: center;
   z-index: 2;
+}
+
+#phone-image{
+  max-width: 100%;
 }
 
 article .main-content {
@@ -350,4 +353,54 @@ footer a{
 
 footer a:hover{
   text-decoration: underline rgba(255, 255, 255, 0.75);
+}
+
+@media only screen and (max-width: 975px){
+  article h2{
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .text-right{
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  nav{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 715px){
+  .article-container{
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    height: fit-content;
+  }
+  .background-container{
+    flex-direction: column;
+    height: 68%;
+  }
+  .phone-container{
+    padding-bottom: 2rem;
+  }
+  .text-right{
+    width: 100%;
+    height: 50%;
+    grid-row: 2 /span 1;
+    justify-content: start;
+    justify-self: start;
+    padding-bottom: 2rem;
+  }
+
+  .text-right .main-content{
+    max-width: 100%;
+    text-align: center;
+  }
+
+  article h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
 }
